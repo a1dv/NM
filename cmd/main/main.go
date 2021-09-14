@@ -2,7 +2,8 @@ package main
 
 import (
     "fmt"
-    "github/Num_meth/cmd/lab1"
+    "github/NM/cmd/lab1"
+    "github/NM/cmd/lab2"
 )
 
 func main() {
@@ -42,6 +43,15 @@ func main() {
                     a = short_reader()
                     lab1.Task5(a, eps)
                 }
+            }
+        } else if l == 2 {
+            var eps float64
+            fmt.Println("Enter the\n 1 - to run theme1\n 2 - to run theme2\n")
+            var th int
+            fmt.Scan(&th)
+            if th == 1 {
+                fmt.Scan(&eps)
+                lab2.Task1(eps)
             }
         }
     }
