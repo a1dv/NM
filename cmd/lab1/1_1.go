@@ -105,7 +105,7 @@ func multiply(l Massiv, u Massiv) Massiv {
 }
 
 func multiply_by_value(a Massiv, b float64) Massiv{
-    res := undef_mass(len(a), len(a[0]))
+    res := Undef_mass(len(a), len(a[0]))
     for i := 0; i < len(a); i++ {
         for j := 0; j < len(a[0]); j++ {
             res[i][j] = a[i][j] * b
@@ -114,10 +114,10 @@ func multiply_by_value(a Massiv, b float64) Massiv{
     return res
 }
 
-func subt(a Massiv, b Massiv) Massiv{
-    res := undef_mass(len(a), len(b))
+func Subt(a Massiv, b Massiv) Massiv{
+    res := Undef_mass(len(a), len(a[0]))
     for i := 0; i < len(a); i++ {
-        for j := 0; j < len(a); j++ {
+        for j := 0; j < len(a[0]); j++ {
             res[i][j] = a[i][j] - b[i][j]
         }
     }

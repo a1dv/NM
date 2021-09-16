@@ -35,7 +35,7 @@ func Jacobi(alpha Massiv, betta []float64, eps float64) []float64 {
         count++
         x := sum(multy(alpha, x_prev), betta)
         fmt.Printf("Jacobi Iteration %d: x = %f\n",count ,x)
-        if Abs(norma(minus(x, x_prev))) <= eps {
+        if Abs(Norma(minus(x, x_prev))) <= eps {
             fmt.Println(count)
             return x
         }
@@ -56,7 +56,7 @@ func Seidel (alpha Massiv, betta []float64, eps float64) []float64 {
             }
         }
         fmt.Printf("Seidel Iteration %d: x = %f\n",count ,x)
-        if Abs(norma(minus(x, x_prev))) <= eps {
+        if Abs(Norma(minus(x, x_prev))) <= eps {
             return x
         }
         x_prev = x
@@ -79,7 +79,7 @@ func minus(a []float64, b []float64) []float64{
     return c
 }
 
-func norma(a []float64) float64{
+func Norma(a []float64) float64{
     res := float64(0)
     for i := 0; i < len(a); i++ {
         res += a[i]

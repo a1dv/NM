@@ -15,7 +15,7 @@ func QR_decompose(m Massiv, eps float64) (Massiv, Massiv){
     a := m
     e := ed_mat(len(a))
     for i := 0; i < len(a) - 1; i ++ {
-        v := undef_mass(1, len(a))
+        v := Undef_mass(1, len(a))
         for j := i; j < len(a); j++ {
             if j == i {
                 v[0][j] = a[j][j] + sign(a[j][j]) * euclid(a, j, i)
@@ -26,7 +26,7 @@ func QR_decompose(m Massiv, eps float64) (Massiv, Massiv){
         for j := 0; j < i; j ++ {
             v[0][j] = 0
         }
-        h := subt(e, multiply_by_value(multiply(transp(v), v), (float64(2) / multiply(v, transp(v))[0][0])))
+        h := Subt(e, multiply_by_value(multiply(transp(v), v), (float64(2) / multiply(v, transp(v))[0][0])))
         fmt.Printf("H_%d is\n",i)
         h.print_mass()
         a = multiply(h, a)
@@ -124,7 +124,7 @@ func ed_mat(size int) Massiv{
 }
 
 func transp(a Massiv) Massiv {
-    res := undef_mass(len(a[0]), len(a))
+    res := Undef_mass(len(a[0]), len(a))
     for i := 0; i < len(a[0]); i++ {
         for j := 0; j < len(a); j++ {
             res[i][j] = a[j][i]
@@ -133,7 +133,7 @@ func transp(a Massiv) Massiv {
     return res
 }
 
-func undef_mass(l int, w int) Massiv{
+func Undef_mass(l int, w int) Massiv{
     res := make(Massiv, l)
     for i := 0; i < l; i++ {
         res[i] = make([]float64, w)

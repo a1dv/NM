@@ -53,6 +53,10 @@ func main() {
                 fmt.Scan(&eps)
                 lab2.Task1(eps)
             }
+            if th == 2 {
+                fmt.Scan(&eps)
+                lab2.Task2(eps)
+            }
         }
     }
 }
