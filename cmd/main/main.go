@@ -4,6 +4,7 @@ import (
     "fmt"
     "github/NM/cmd/lab1"
     "github/NM/cmd/lab2"
+    "github/NM/cmd/lab3"
 )
 
 func main() {
@@ -56,6 +57,13 @@ func main() {
             if th == 2 {
                 fmt.Scan(&eps)
                 lab2.Task2(eps)
+            }
+        } else if l == 3 {
+            fmt.Println("Enter the\n 1 - to run theme1\n 2 - to run theme2\n")
+            var th int
+            fmt.Scan(&th)
+            if th == 1 {
+                lab3.Task1()
             }
         }
     }
