@@ -64,6 +64,8 @@ func main() {
             fmt.Scan(&th)
             if th == 1 {
                 lab3.Task1()
+            } else if th == 2 {
+                lab3.Task2()
             }
         }
     }
