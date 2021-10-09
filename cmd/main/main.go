@@ -66,6 +66,8 @@ func main() {
                 lab3.Task1()
             } else if th == 2 {
                 lab3.Task2()
+            } else if th == 3 {
+                lab3.Task3()
             }
         }
     }

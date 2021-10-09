@@ -23,13 +23,13 @@ func Task1(a Massiv, b []float64) {
     res.print_mass()
     x := make([]float64, len(a))
     z := make([]float64, len(a))
-    solve(u, a, l, z, x, b)
+    Solve(u, a, l, z, x, b)
     fmt.Println("z is ", z)
     fmt.Println("x is ", x)
     fmt.Println("determinant is", determinant(l, u))
 }
 
-func solve(u Massiv, a Massiv, l Massiv, z []float64, x []float64, b []float64) {
+func Solve(u Massiv, a Massiv, l Massiv, z []float64, x []float64, b []float64) {
     z[0] = b[0]
     for i := 1; i < len(a); i++ {
         z[i] = b[i]
