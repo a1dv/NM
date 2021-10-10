@@ -59,7 +59,7 @@ func main() {
                 lab2.Task2(eps)
             }
         } else if l == 3 {
-            fmt.Println("Enter the\n 1 - to run theme1\n 2 - to run theme2\n")
+            fmt.Println("Enter the\n 1 - to run theme1\n 2 - to run theme2\n 3 - to run theme3\n 4 - to run theme4\n 5 - to run theme5")
             var th int
             fmt.Scan(&th)
             if th == 1 {
@@ -68,6 +68,8 @@ func main() {
                 lab3.Task2()
             } else if th == 3 {
                 lab3.Task3()
+            } else if th == 4 {
+                lab3.Task4()
             }
         }
     }
